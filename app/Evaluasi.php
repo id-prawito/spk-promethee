@@ -1,0 +1,44 @@
+<?php
+
+namespace App;
+
+use Illuminate\Database\Eloquent\Model;
+
+class Evaluasi extends Model
+{
+    protected $table = 'evaluasis';
+    protected $fillable = ['id', 'alternatif', 'kriteria', 'nilai', 'submit_by', 'created_at', 'updated_at'];
+
+    public function user()
+    {
+        return $this->hasOne('App\User', 'id');
+    }
+
+    public function alternatif()
+    {
+        return $this->hasOne('App\Alternatif', 'id');
+    }
+
+    public function kriteria()
+    {
+        return $this->hasOne('App\Kriteria', 'id');
+    }
+
+    public function klasifikasis()
+    {
+        return $this->hasMany('App\Klasifikasi', 'nilai', 'nilai');
+    }
+
+    //Hapus
+    protected $with = ['kriterias', 'alternatifs'];
+
+    public function kriterias()
+    {
+        return $this->belongsTo('App\Kriteria', 'id');
+    }
+
+    public function alternatifs()
+    {
+        return $this->belongsTo('App\Alternatif', 'id');
+    }
+}

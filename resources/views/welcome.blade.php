@@ -37,14 +37,14 @@
     <header id="header" class="fixed-top d-flex align-items-center">
         <div class="container d-flex align-items-center">
             <div class="logo mr-auto">
-                <h1 class="text-light"><a href="index.html"><span><img src="{{ asset('img/promethee-logo.png') }}" class="img-fluid" alt="Logo"></span></a></h1>
+                <h1 class="text-light"><a href="{{ url('/') }}"><span><img src="{{ asset('img/promethee-logo.png') }}" class="img-fluid" alt="Logo"></span></a></h1>
             </div>
             <nav class="nav-menu d-none d-lg-block">
                 <ul>
                     <li><a href="#data"><b>DATA</b></a></li>
                     <li><a href="#fitur"><b>FITUR</b></a></li>
                     <li><a href="#promethee"><b>PROMETHEE</b></a></li>
-                    <li><a href="#rangking"><b>RANGKING</b></a></li>
+                    <li><a href="#ranking"><b>RANKING</b></a></li>
                     <li><a href="#tentang"><b>TENTANG</b></a></li>
                     @if (Route::has('login'))
                     @auth
@@ -230,7 +230,7 @@
                         <div class="icon-box">
                             <i class="ri-medal-line" style="color: #5578ff;"></i>
                             <h3>
-                                <div style="cursor:pointer" data-toggle="modal" data-target="#dataRangking">Data Rangking</div>
+                                <div style="cursor:pointer" data-toggle="modal" data-target="#dataRanking">Data Ranking</div>
                             </h3>
                         </div>
                     </div>
@@ -330,12 +330,12 @@
                         </div>
                     </div>
                 </div>
-                <!-- Modal Data Rangking -->
-                <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" id="dataRangking" aria-hidden="true">
+                <!-- Modal Data Ranking -->
+                <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" id="dataRanking" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
                         <div style="border-top:2px solid #5578ff !important;" class="modal-content">
                             <div style="box-shadow:0 4px 8px rgba(0, 0, 0, 0.03); border-radius:3px" class="card-body">
-                                <span style="padding:18px; font-size:14px;">Data Rangking</span>
+                                <span style="padding:18px; font-size:14px;">Data Ranking</span>
                                 <div style="padding:5px; border-radius:5px; font-size:14px;" class="table-responsive">
                                     <table id="tableRangking" class="table table-borderless table-striped" width="100%">
                                         <thead style="text-align:center; font-size:13px;background-color:#d6d6d6">
@@ -376,12 +376,12 @@
             </div>
         </section>
         <!-- ======= END PROMETHEE SECTION ======= -->
-        <!-- =======  RANGKING SECTION  ======= -->
-        <section id="rangking" class="counts pt-5">
+        <!-- =======  RANKING SECTION  ======= -->
+        <section id="ranking" class="counts pt-5">
             <div class="container">
                 <div class="section-title" data-aos="fade-up">
-                    <h2>rangking</h2>
-                    <p style="font-size: 15px;">Dan ini adalah hasil perangkingan dari perhitungan data menggunakan metode promethee.</p>
+                    <h2>ranking</h2>
+                    <p style="font-size: 15px;">Dan ini adalah hasil perankingan dari perhitungan data menggunakan metode promethee.</p>
                 </div>
                 <div class="row">
                     <div class="col-xl-7 d-flex align-items-stretch pt-4 pt-xl-0" data-aos="fade-left" data-aos-delay="300">
@@ -405,7 +405,7 @@
                 </div>
             </div>
         </section>
-        <!-- ======= END RANGKING SECTION ======= -->
+        <!-- ======= END RANKING SECTION ======= -->
         <!-- =======   TENTANG SECTION    ======= -->
         <section id="tentang" class="about">
             <div class="container">
@@ -421,8 +421,8 @@
                             <li><i class="ri-check-double-line"></i> Penentuan deviasi berdasarkan perbandingan berpasangan.</li>
                             <li><i class="ri-check-double-line"></i> Penerapan fungsi preferensi.</li>
                             <li><i class="ri-check-double-line"></i> Perhitungan indeks preferensi global.</li>
-                            <li><i class="ri-check-double-line"></i> Perhitungan aliran perangkingan dan peringkat parsial atau perhitungan nilai-nilai leaving flow dan entering flow pada setiap alternatif.</li>
-                            <li><i class="ri-check-double-line"></i> Perhitungan aliran perangkingan bersih dan peringkat lengkap atau perhitungan nilai netflow.</li>
+                            <li><i class="ri-check-double-line"></i> Perhitungan aliran perankingan dan peringkat parsial atau perhitungan nilai-nilai leaving flow dan entering flow pada setiap alternatif.</li>
+                            <li><i class="ri-check-double-line"></i> Perhitungan aliran perankingan bersih dan peringkat lengkap atau perhitungan nilai netflow.</li>
                         </ul>
                     </div>
                     <div class="col-lg-6 pt-4 pt-lg-0" data-aos="fade-up" data-aos-delay="300">

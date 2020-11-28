@@ -6,7 +6,7 @@
     <div class="form-content">
         <div class="form-items">
             <h4><b>{{ __('Masuk') }}</b></h4>
-            <p style="font-size: 14px;">Bagi kamu yang sudah terdaftar, silakan masuk/login</p>
+            <p style="font-size: 14px;">Bagi yang sudah terdaftar, silakan masuk (login)</p>
             <div class="page-links">
                 <a href="{{ route('login') }}" class="active">Masuk</a><a href="{{ route('register') }}">Daftar</a>
             </div>

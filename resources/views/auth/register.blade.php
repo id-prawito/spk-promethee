@@ -6,7 +6,7 @@
     <div class="form-content">
         <div class="form-items">
             <h4><b>{{ __('Daftar') }}</b></h4>
-            <p style="font-size: 14px; margin-bottom:1rem;">Mohon isi data dengan Benar, Keterangan Role : User.<br>Note : Pastikan email yang digunakan masih aktif.</p>
+            <p style="font-size: 14px; margin-bottom:1rem;">Mohon isi data dengan benar, Keterangan Role : User.<br>Note : Pastikan email yang digunakan masih aktif.</p>
             @if (session('success'))
             <div class="alert alert-success" role="alert">
                 {{ session('success') }}
@@ -60,9 +60,7 @@
                             <div class="input-group-prepend">
                                 <span style="border: none; font-size: 14px; background-color:#F7F7F7; padding-left:20px;padding-right:20px; color:#000;" class="input-group-text" id="inputGroupPrepend"> Role</span>
                             </div>
-                            <select style="border-radius:0px 6px 6px 0px; color:#000; font-size: 14px; background-color:#F7F7F7; border:none; border-left:1px solid #E2E2E2 !important" name="role" class="form-control custom-select">
-                                <option value="User">User</option>
-                            </select>
+                            <input type="text" style="font-size: 14px;" class="form-control" name="role" value="User" readonly>
                         </div>
                     </div>
                 </div>

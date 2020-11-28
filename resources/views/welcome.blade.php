@@ -313,7 +313,7 @@
                                         <thead style="text-align:center; font-size:13px; background-color:#d6d6d6">
                                             <tr>
                                                 <th>KODE</th>
-                                                <th>ALTERNATIF</th>
+                                                <th>KRITERIA</th>
                                             </tr>
                                         </thead>
                                         <tbody style="text-align:center; font-size:13px">
@@ -530,6 +530,7 @@
             $('#tableKriteria').DataTable({
                 "pagingType": "simple_numbers",
                 "searching": false,
+                "ordering": false,
                 "paging": false
             });
         });
@@ -539,6 +540,7 @@
             //Pagination numbers
             $('#tableEvaluasi').DataTable({
                 "pagingType": "simple_numbers",
+                "ordering": false,
                 "searching": false,
                 "paging": false
             });
@@ -550,6 +552,7 @@
             $('#tableKeterangan').DataTable({
                 "pagingType": "simple_numbers",
                 "searching": false,
+                "ordering": false,
                 "paging": false
             });
         });

@@ -367,7 +367,7 @@
                             <div style="box-shadow:0 4px 8px rgba(0, 0, 0, 0.03); border-radius:3px" class="card-body">
                                 <span style="padding:18px; font-size:14px;">Data Peta</span>
                                 <div style="padding:15px; border-radius:5px; font-size:14px;">
-                                    <iframe width="100%" height="720" frameborder="0" src="https://prawito.carto.com/builder/0a97a764-9180-4d4b-8c9e-c04c0421e6db/embed" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+                                    <iframe width="100%" height="475" frameborder="0" src="https://prawito.carto.com/builder/0a97a764-9180-4d4b-8c9e-c04c0421e6db/embed" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
                                 </div>
                             </div>
                         </div>

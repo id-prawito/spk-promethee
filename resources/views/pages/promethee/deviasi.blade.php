@@ -81,8 +81,8 @@
                             <thead style="text-align:center;">
                                 <tr>
                                     <th>NO</th>
-                                    <th>KECAMATAN</th>
-                                    <th>KECAMATAN</th>
+                                    <th>ALTERNATIF</th>
+                                    <th>ALTERNATIF</th>
                                     <th>A</th>
                                     <th>B</th>
                                     <th>KRITERIA</th>
@@ -112,8 +112,8 @@
                             <tfoot style="text-align:center; color:#666">
                                 <tr>
                                     <th>NO</th>
-                                    <th>KECAMATAN</th>
-                                    <th>KECAMATAN</th>
+                                    <th>ALTERNATIF</th>
+                                    <th>ALTERNATIF</th>
                                     <th>A</th>
                                     <th>B</th>
                                     <th>KRITERIA</th>

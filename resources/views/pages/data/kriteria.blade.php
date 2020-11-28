@@ -41,7 +41,7 @@
                         <thead style="text-align:center;">
                             <tr>
                                 <th>ID</th>
-                                <th>NAMA</th>
+                                <th>KRITERIA</th>
                                 <th>PARAMETER</th>
                                 <th>TIPE</th>
                                 <th>q</th>
@@ -135,7 +135,7 @@
                         <tfoot style="text-align:center; color:#666">
                             <tr>
                                 <th>ID</th>
-                                <th>NAMA</th>
+                                <th>KRITERIA</th>
                                 <th>PARAMETER</th>
                                 <th>TIPE</th>
                                 <th>q</th>

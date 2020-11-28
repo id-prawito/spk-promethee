@@ -243,7 +243,7 @@
         <div class="col-12 col-md-6 col-lg-5">
             <div class="card card-primary">
                 <div class="card-header">
-                    <h4>Rangking</h4>
+                    <h4>Ranking</h4>
                 </div>
                 <div class="card-body">
                     <div class="table-responsive">
@@ -282,7 +282,7 @@
                     <h4>Peta Semarang</h4>
                 </div>
                 <div class="card-body">
-                    <iframe width="100%" height="720" frameborder="0" src="https://prawito.carto.com/builder/0a97a764-9180-4d4b-8c9e-c04c0421e6db/embed" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+                    <iframe width="100%" height="475" frameborder="0" src="https://prawito.carto.com/builder/0a97a764-9180-4d4b-8c9e-c04c0421e6db/embed" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
                 </div>
             </div>
         </div>

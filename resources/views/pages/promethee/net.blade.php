@@ -36,7 +36,7 @@
         <div class="col-12 col-md-6 col-lg-12">
             <div class="card card-primary">
                 <div class="card-header">
-                    <h4>Rangking</h4>
+                    <h4>Ranking</h4>
                 </div>
                 <div class="card-body">
                     <div class="row">

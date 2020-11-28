@@ -82,8 +82,8 @@
                             <thead style="text-align:center;">
                                 <tr>
                                     <th>NO</th>
-                                    <th>KECAMATAN</th>
-                                    <th>KECAMATAN</th>
+                                    <th>ALTERNATIF</th>
+                                    <th>ALTERNATIF</th>
                                     <th>KRITERIA</th>
                                     <th>TIPE</th>
                                     <th>PREFERENSI</th>
@@ -109,8 +109,8 @@
                             <tfoot style="text-align:center; color:#666">
                                 <tr>
                                     <th>NO</th>
-                                    <th>KECAMATAN</th>
-                                    <th>KECAMATAN</th>
+                                    <th>ALTERNATIF</th>
+                                    <th>ALTERNATIF</th>
                                     <th>KRITERIA</th>
                                     <th>TIPE</th>
                                     <th>PREFERENSI</th>
@@ -133,8 +133,8 @@
                             <thead style="text-align:center;">
                                 <tr>
                                     <th>NO</th>
-                                    <th>KECAMATAN</th>
-                                    <th>KECAMATAN</th>
+                                    <th>ALTERNATIF</th>
+                                    <th>ALTERNATIF</th>
                                     <th>TOTAL INDEKS PREFERENSI</th>
                                 </tr>
                             </thead>
@@ -154,8 +154,8 @@
                             <tfoot style="text-align:center; color:#666">
                                 <tr>
                                     <th>NO</th>
-                                    <th>KECAMATAN</th>
-                                    <th>KECAMATAN</th>
+                                    <th>ALTERNATIF</th>
+                                    <th>ALTERNATIF</th>
                                     <th>TOTAL INDEKS PREFERENSI</th>
                                 </tr>
                             </tfoot>

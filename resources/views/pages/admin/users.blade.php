@@ -250,16 +250,16 @@
                                     <td>{{$user->email}}</td>
                                     <td>
                                         @if ($user->status == 0)
-                                        Inactive
+                                        <b>Inactive</b>
                                         @else
-                                        Active
+                                        <b>Active</b>
                                         @endif
                                     </td>
                                     <td>
                                         @if ($user -> status == 1)
-                                        <a href="{{route('status', ['id'=>$user->id])}}" class="btn btn-icon icon-left btn-danger"><i class="far fa-edit"></i> Inactive</a></a>
+                                        <a href="{{route('status', ['id'=>$user->id])}}" class="btn btn-icon icon-left btn-danger"><i class="far fa-edit"></i> Deactivated</a></a>
                                         @else
-                                        <a href="{{route('status', ['id'=>$user->id])}}" class="btn btn-icon icon-left btn-info"><i class="far fa-edit"></i> Active</a></a>
+                                        <a href="{{route('status', ['id'=>$user->id])}}" class="btn btn-icon icon-left btn-info"><i class="far fa-edit"></i> Actived</a></a>
                                         @endif
                                     </td>
                                 </tr>

@@ -32,6 +32,20 @@
 @endpush
 
 @section('content')
+@if ($message = Session::get('info'))
+    <div class="alert alert-info alert-dismissible fade show alert-has-icon" role="alert">
+        <div class="alert-icon">
+            <i class="far fa-check-circle"></i>
+        </div>
+        <div class="alert-body">
+            <div class="alert-title" style="font-weight:normal">Pemberitahuan</div>
+            {{$message}}
+        </div>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    @endif
 <div class="row">
     <div class="col-12 col-md-6 col-lg-12">
         <div class="card card-primary">

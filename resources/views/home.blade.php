@@ -43,7 +43,7 @@
                         <h4>Total Evaluasi</h4>
                     </div>
                     <div class="card-body">
-                        10
+                    {{Kustom::CountAlternatifs()*Kustom::CountKriterias()}}
                     </div>
                 </div>
             </div>

@@ -400,7 +400,7 @@
                         </div>
                     </div>
                     <div class="image col-xl-5 d-flex align-items-stretch justify-content-center justify-content-xl-start" data-aos="fade-right" data-aos-delay="150">
-                        <img src="{{ asset('img/img-3.png') }}" alt="" class="img-fluid">
+                        <img src="{{ asset('img/img-4.png') }}" alt="" class="img-fluid">
                     </div>
                 </div>
             </div>

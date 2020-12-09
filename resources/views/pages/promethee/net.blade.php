@@ -74,7 +74,7 @@
                             </div>
                         </div>
                         <div class="col">
-                            <img class="img-fluid" src="{{ asset('img/img-3.png') }}" alt="tag">
+                            <img class="img-fluid" src="{{ asset('img/img-4.png') }}" alt="tag">
                         </div>
                     </div>
                 </div>

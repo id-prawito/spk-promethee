@@ -66,7 +66,7 @@ class AdminController extends Controller
             'p' => $request->p
         ]);
         // dd($request);
-        return redirect(route('kriteria.read'))->with('success', 'Kriteria berhasil di Update');
+        return redirect(route('kriteria.read'))->with('info', 'Kriteria berhasil di Update');
     }
 
     public function Preferensi()
@@ -216,7 +216,7 @@ class AdminController extends Controller
         $update->nilai = $request->nilai;
         $update->save();
         // dd($update);
-        return back()->with('success', 'Nilai berhasil di Update');
+        return back()->with('info', 'Nilai berhasil di Update');
     }
 
     public function DataCorona()

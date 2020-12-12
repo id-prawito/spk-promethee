@@ -40,6 +40,7 @@
         <div class="alert-body">
             <div class="alert-title" style="font-weight:normal">Pemberitahuan</div>
             {{$message}}
+            
         </div>
         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
             <span aria-hidden="true">&times;</span>

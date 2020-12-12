@@ -40,21 +40,7 @@
 
 @section('content')
 <section class="section">
-    @if ($message = Session::get('success'))
-    <div class="alert alert-success alert-dismissible fade show alert-has-icon" role="alert">
-        <div class="alert-icon">
-            <i class="far fa-check-circle"></i>
-        </div>
-        <div class="alert-body">
-            <div class="alert-title" style="font-weight:normal">Sukses</div>
-            {{$message}}
-        </div>
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-        </button>
-    </div>
-
-    @elseif($message = Session::get('info'))
+    @if($message = Session::get('info'))
     <div class="alert alert-info alert-dismissible fade show alert-has-icon" role="alert">
         <div class="alert-icon">
             <i class="far fa-lightbulb"></i>

@@ -26,7 +26,7 @@ Route::get('/admin/data/kriteria/edit', 'AdminController@KriteriaEdit')->name('k
 
 // USERS
 Route::get('/admin/user', 'AdminController@Pengguna')->name('pengguna.read');
-Route::get('status/{id}', 'AdminController@Status')->name('status');
+Route::get('/status/{id}', 'AdminController@Status')->name('status');
 Route::post('/admin/user/post', 'AdminController@CreatePengguna')->name('pengguna.create');
 Route::post('/admin/user/{id}/update', 'AdminController@UpdatePengguna')->name('pengguna.update');
 Route::post('/admin/user/delete', 'AdminController@DeletePengguna')->name('pengguna.delete');

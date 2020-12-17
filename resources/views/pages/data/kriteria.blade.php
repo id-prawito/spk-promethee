@@ -92,7 +92,7 @@
                                                     <br>
                                                     <div class="form-group">
                                                         <h7>Nama Kriteria</h7>
-                                                        <input class="form-control mt-2" autofocus type="text" name="nama" value="{{$data->nama}}" required>
+                                                        <input class="form-control mt-2" autofocus type="text" name="nama" value="{{$data->nama}}" readonly>
                                                     </div>
                                                     <div class="form-group">
                                                         <h7>Parameter</h7>
@@ -128,7 +128,7 @@
                                                     </div>
                                                     <div class="form-group">
                                                         <h7>Bobot</h7>
-                                                        <input disabled class="form-control mt-2" type="number" name="bobot" value="{{$data->bobot}}">
+                                                        <input readonly class="form-control mt-2" type="number" name="bobot" value="{{$data->bobot}}">
                                                     </div>
                                             </div>
                                             <div class="modal-footer br">

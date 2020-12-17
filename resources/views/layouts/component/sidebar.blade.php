@@ -27,7 +27,7 @@
             </li>
             <li class="dropdown {{ (request()->is('admin/kriteria*')) ? 'active' : '' }}"">
                 <a href=" #" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-list-ul"></i>
-                <span>Kriteria</span></a>
+                <span>Evaluasi Kriteria</span></a>
                 <ul class="dropdown-menu">
                     @php
                     $sidebar = Kustom::MenuKriteria();

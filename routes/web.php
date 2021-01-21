@@ -18,8 +18,10 @@ Auth::routes();
 
 Route::get('/', 'UserController@Welcome')->name('welcome');
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/faq', 'UserController@faq')->name('faq');
 
 // ADMIN
+Route::get('/bantuan', 'AdminController@Bantuan')->name('bantuan.read');
 Route::get('/admin/semarang', 'AdminController@Semarang')->name('semarang.read');
 Route::get('/admin/data/kriteria', 'AdminController@KriteriaRead')->name('kriteria.read');
 Route::get('/admin/data/kriteria/edit', 'AdminController@KriteriaEdit')->name('kriteria.edit');

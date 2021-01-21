@@ -35,6 +35,11 @@ class AdminController extends Controller
         return view('pages/admin/semarang');
     }
 
+    public function Bantuan()
+    {
+        return view('pages/admin/bantuan');
+    }
+
     public function AlternatifRead()
     {
         $alternatifs = Alternatif::all();

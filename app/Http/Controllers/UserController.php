@@ -29,4 +29,9 @@ class UserController extends Controller
         $arraynet = Kustom::Net();
         return view('welcome', compact(['preferensis', 'kriterias', 'data', 'prefs', 'datas', 'arraynet']));
     }
+
+    public function faq()
+    {
+        return view('faq');
+    }
 }

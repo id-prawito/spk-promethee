@@ -60,7 +60,6 @@ class HomeController extends Controller
         return view('home', compact(['preferensis', 'kriterias', 'data', 'prefs', 'datas', 'arraynet', 'corona_jawaTengah', 'indonesia', 'corona', 'days_count', 'days_count_prev', 'yesterday']));
     }
 
-
     public function dataCorona()
     {
         $jawaTengah = Http::get('https://api.kawalcorona.com/indonesia/provinsi')

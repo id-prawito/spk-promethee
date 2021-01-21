@@ -373,7 +373,7 @@ h6 {
     width: 100%;
     height: 70vh;
     margin-top: 120px;
-    margin-bottom: 7rem;
+    margin-bottom: 3rem;
 }
 
 #hero h1 {
@@ -397,15 +397,19 @@ h6 {
     letter-spacing: 1px;
     display: inline-block;
     padding: 10px 20px;
-    border-radius: .4rem;
+    border-radius: .5rem;
     transition: 0.5s;
-    color: #3498db;
-    border: 2px solid #3498db;
+    background: #3460df;
+    border: 2px solid #3460df;
+    color: #fff;
 }
 
 #hero .btn-get-started:hover {
-    background: #3498db;
-    color: #fff;
+    /* background: #3498db;
+    color: #fff; */
+    background: #fff;
+    color: #3460df;
+    border: 2px solid #3460df;
 }
 
 #hero .animated {
@@ -488,7 +492,7 @@ h6 {
   # Sections General
   --------------------------------------------------------------*/
 section {
-    padding: 60px 0;
+    padding: 40px 0;
     overflow: hidden;
 }
 
@@ -498,7 +502,7 @@ section {
 
 .section-title {
     text-align: center;
-    padding-bottom: 30px;
+    padding-bottom: 15px;
 }
 
 .section-title h2 {
@@ -528,6 +532,25 @@ section {
 
 .section-title p {
     margin: 15px 0 0 0;
+}
+
+
+@media (max-width: 768px) {
+    .section-title h2 {
+        font-size: 30px;
+        font-weight: bold;
+        position: relative;
+        color: #222222;
+    }
+}
+
+@media (max-width: 300px) {
+    .section-title h2 {
+        font-size: 20px;
+        font-weight: bold;
+        position: relative;
+        color: #222222;
+    }
 }
 
 /*--------------------------------------------------------------
@@ -702,13 +725,13 @@ section {
     }
 
     .counts .image img {
-        max-width: 70%;
+        max-width: 90%;
     }
 }
 
 @media (max-width: 667px) {
     .counts .image img {
-        max-width: 70%;
+        max-width: 90%;
     }
 }
 

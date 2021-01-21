@@ -46,6 +46,7 @@
                     <li><a href="#promethee"><b>PROMETHEE</b></a></li>
                     <li><a href="#ranking"><b>RANKING</b></a></li>
                     <li><a href="#tentang"><b>TENTANG</b></a></li>
+                    <li><a href="{{ url('/faq') }}"><b>FAQ</b></a></li>
                     @if (Route::has('login'))
                     @auth
                     <li class="get-started">
@@ -443,48 +444,6 @@
             </div>
         </section>
         <!-- ======= END TENTANG SECTION  ======= -->
-        <!-- =======     F.A.Q SECTION    ======= -->
-        <section id="faq" class="faq">
-            <div class="container">
-                <div class="section-title" data-aos="fade-up">
-                    <h2>pertanyaan</h2>
-                </div>
-                <div class="row faq-item d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
-                    <div class="col-lg-5">
-                        <i class="ri-question-line"></i>
-                        <h3>Apa itu Sistem Pendukung Keputusan ?</h3>
-                    </div>
-                    <div class="col-lg-7">
-                        <p>
-                            Bagian dari sistem informasi berbasis komputer (termasuk sistem berbasis pengetahuan (manajemen pengetahuan)) yang dipakai untuk mendukung pengambilan keputusan dalam suatu organisasi atau perusahaan.
-                        </p>
-                    </div>
-                </div>
-                <div class="row faq-item d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
-                    <div class="col-lg-5">
-                        <i class="ri-question-line"></i>
-                        <h3>Manfaat Metode Promethee dalam Sistem Pendukung Keputusan ?</h3>
-                    </div>
-                    <div class="col-lg-7">
-                        <p>
-                            Membantu untuk menentukan lokasi embung di Kabupaten Semarang melalui perhitungan data berdasarkan alternatif yang ada.
-                        </p>
-                    </div>
-                </div>
-                <div class="row faq-item d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
-                    <div class="col-lg-5">
-                        <i class="ri-question-line"></i>
-                        <h3>Tujuan pembuatan web sistem pendukung keputusan ?</h3>
-                    </div>
-                    <div class="col-lg-7">
-                        <p>
-                            Pengimplementasian Preference Ranking Organization Method for Enrichment Evaluation pada perancangan Sistem Informasi dengan mengolah data dan kriteria dari Kabupaten Semarang untuk memudahkan penentuan lokasi pembangunan embung di Kabupaten Semarang.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- =======   END F.A.Q SECTION  ======= -->
     </main>
     <!-- ======= END MAIN SECTION ======= -->
     <!-- ======= FOOTER ======= -->

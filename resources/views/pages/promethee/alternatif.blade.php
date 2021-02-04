@@ -174,7 +174,8 @@
                             @php
                                     for ($id=1; $id <= Kustom::CountAlternatifs(); $id++) 
                                     
-                                    { echo '<tr align="center">' ; echo '<td align="center">' .$datas['alternatifs'][$id-1]['nama'].'</td>'; $getevals=Kustom::JoinanTabel($id); 
+                                    { echo '<tr align="center">' ; echo '<td align="center">' 
+                                    .$datas['alternatifs'][$id-1]['nama'].'</td>'; $getevals=Kustom::JoinanTabel($id); 
                                     foreach ($getevals as $evals) { echo '<td>' .$evals->nilai.'</td>';
                                         }
                                         echo '</tr>';

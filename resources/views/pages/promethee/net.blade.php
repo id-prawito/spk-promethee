@@ -39,11 +39,8 @@
                     <h4>Ranking</h4>
                 </div>
                 <div class="card-body">
-                    <div class="row">
-                        <div class="col">
-                            <div class="card card-primary">
-                                <div class="card-body">
-                                    <div class="table-responsive">
+                    
+                                    <div class="table">
                                         <table id="table-1" class="table table-striped" width="100%">
                                             <thead style="text-align:center;">
                                                 <tr>
@@ -70,13 +67,6 @@
                                             </tfoot>
                                         </table>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <img class="img-fluid" src="{{ asset('img/img-4.png') }}" alt="tag">
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>

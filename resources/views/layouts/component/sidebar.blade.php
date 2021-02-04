@@ -74,7 +74,7 @@
             <li class="nav-item {{ Request::is('admin/user*') ? 'active' : null }}"><a href="{{route('pengguna.read')}}" class="nav-link"><i class="far fa-user"></i><span>Users</span></a>
             </li>
             @endif
-            <li class="nav-item {{ Request::is('/bantuan') ? 'active' : null }}"><a href="{{route('bantuan.read')}}" class="nav-link"><i class="far fa-user"></i><span>Bantuan</span></a>
+            <li class="nav-item {{ Request::is('/bantuan') ? 'active' : null }}"><a href="{{route('bantuan.read')}}" class="nav-link"><i class="fas fa-lightbulb"></i><span>Bantuan</span></a>
             </li>
         </ul>
     </aside>

@@ -89,7 +89,7 @@
             <i class="far fa-check-circle"></i>
         </div>
         <div class="alert-body">
-            <div class="alert-title" style="font-weight:normal">Pemeberitahuan</div>
+            <div class="alert-title" style="font-weight:normal">Pemberitahuan</div>
             {{$message}}
         </div>
         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -151,7 +151,7 @@
                                         <div class="input-group mt-2">
                                             <div class="input-group-prepend">
                                             </div>
-                                            <input class="form-control" type="number" name="nilai" placeholder="..." required>
+                                            <input class="form-control" type="number" min="1" name="nilai" placeholder="..." required>
                                         </div>
                                     </div>
                                 </div>
@@ -171,7 +171,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <button style="line-height:26px;" class="btn btn-icon icon-left btn-info" type="submit"><i class="fas fa-info-circle"></i> <b>PROSES ALTERNATIF</b></button>
+                            <button style="line-height:26px;" class="btn btn-icon icon-left btn-info" type="submit"><i class="fas fa-info-circle"></i> <b>PROSES KLASIFIKASI</b></button>
                         </form>
                     </div>
                 </div>
@@ -250,7 +250,7 @@
                                                         </div>
                                                         <div class="form-group">
                                                             <h7>Klasifikasi</h7>
-                                                            <input class="form-control mt-2" autofocus type="text" name="klasifikasi" value="{{$data->klasifikasi}}">
+                                                            <input class="form-control mt-2" required type="text" name="klasifikasi" value="{{$data->klasifikasi}}">
                                                         </div>
                                                 </div>
                                                 <div class="modal-footer br">

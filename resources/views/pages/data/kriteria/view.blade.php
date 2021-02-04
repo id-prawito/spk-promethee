@@ -65,42 +65,31 @@
                 </div>
                 <div class="collapse" id="mycard-collapse">
                     <div class="card-body">
-                        <div class="row">
-                            <div class="col">
-                                <div style="border-left:2px solid #ffa426" class="card">
-                                    <div class="card-body">
-                                        <div class="table-responsive">
-                                            <table id="table-2" class="table table-striped" width="100%">
-                                                <thead style="text-align:center;">
-                                                    <tr>
-                                                        <th>NILAI</>
-                                                        <th>KLASIFIKASI</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody style="text-align:center;">
-                                                    @foreach ($datas['getklasifikasi'] as $data)
-                                                    @if ($data->nama == $datas['getkriteria']->nama)
-                                                    <tr>
-                                                        <td>{{$data->nilai}}</td>
-                                                        <td>{{$data->klasifikasi}}</td>
-                                                    </tr>
-                                                    @endif
-                                                    @endforeach
-                                                </tbody>
-                                                <tfoot style="text-align:center; color:#666">
-                                                    <tr>
-                                                        <th>NILAI</>
-                                                        <th>KLASIFIKASI</th>
-                                                    </tr>
-                                                </tfoot>
-                                            </table>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col">
-                                <img class="img-fluid" src="{{ asset('img/ilus2.svg') }}" alt="tag">
-                            </div>
+                        <div class="table">
+                            <table id="table-2" class="table table-striped" width="100%">
+                                <thead style="text-align:center;">
+                                    <tr>
+                                        <th>NILAI</>
+                                        <th>KLASIFIKASI</th>
+                                    </tr>
+                                </thead>
+                                <tbody style="text-align:center;">
+                                    @foreach ($datas['getklasifikasi'] as $data)
+                                    @if ($data->nama == $datas['getkriteria']->nama)
+                                        <tr>
+                                            <td>{{$data->nilai}}</td>
+                                            <td>{{$data->klasifikasi}}</td>
+                                        </tr>
+                                    @endif
+                                    @endforeach
+                                </tbody>
+                                <tfoot style="text-align:center; color:#666">
+                                <tr>
+                                    <th>NILAI</th>
+                                    <th>KLASIFIKASI</th>
+                                </tr>
+                                </tfoot>
+                            </table>
                         </div>
                     </div>
                 </div>

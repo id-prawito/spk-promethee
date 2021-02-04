@@ -105,7 +105,7 @@
                                                     <i class="fas fa-location-arrow"></i>
                                                 </div>
                                             </div>
-                                            <input class="form-control" type="number" name="id" placeholder="ID Alternatif..." required>
+                                            <input class="form-control" type="number" min="1" name="id" placeholder="ID Alternatif..." required>
                                         </div>
                                     </div>
                                 </div>

@@ -139,7 +139,7 @@
                                                             </div>
                                                             <div class="form-group">
                                                                 <h7>Email</h7>
-                                                                <input class="form-control mt-2" type="text" name="email" value="{{$data->email}}" required>
+                                                                <input class="form-control mt-2" type="text" name="email" value="{{$data->email}}" readonly>
                                                             </div>
                                                             <div class="form-group">
                                                                 <h7>Role</h7>

@@ -2,7 +2,7 @@
 
 @section('header')
 @section('pages','Data')
-@section('title',$datas['getkriteria']->nama)
+@section('title', $datas['getkriteria']->nama)
 @include('layouts.component.header')
 @endsection
 
@@ -10,9 +10,15 @@
 <link rel="stylesheet" href="{{asset('modules/datatables/datatables.min.css')}}">
 <link rel="stylesheet" href="{{asset('modules/datatables/DataTables-1.10.16/css/dataTables.bootstrap4.min.css')}}">
 <link rel="stylesheet" href="{{asset('modules/datatables/Select-1.2.4/css/select.bootstrap4.min.css')}}">
+<!-- CSS Select -->
+<link rel="stylesheet" href="{{asset('modules/select2/dist/css/select2.min.css')}}">
+<link rel="stylesheet" href="{{asset('modules/jquery-selectric/selectric.css')}}">
 @endpush
 
 @push('page-scripts')
+<!-- Js Select -->
+<script src="{{asset('modules/select2/dist/js/select2.full.min.js')}}"></script>
+<script src="{{asset('modules/jquery-selectric/jquery.selectric.min.js')}}"></script>
 <script src="{{asset('modules/datatables/datatables.min.js')}}"></script>
 <script src="{{asset('modules/datatables/DataTables-1.10.16/js/dataTables.bootstrap4.min.js')}}"></script>
 <script src="{{asset('modules/datatables/Select-1.2.4/js/dataTables.select.min.js')}}"></script>
@@ -60,7 +66,7 @@
                 <div class="card-header">
                     <h4>Keterangan</h4>
                     <div class="card-header-action">
-                        <a data-collapse="#mycard-collapse" class="btn btn-icon btn-info" href="#"><i class="fas fa-plus"></i></a>
+                        <a data-collapse="#mycard-collapse" class="btn btn-icon btn-info" href="#"><i class="fas fa-chevron-down"></i></a>
                     </div>
                 </div>
                 <div class="collapse" id="mycard-collapse">
@@ -101,7 +107,7 @@
         <div class="col-12 col-md-6 col-lg-12">
             <div class="card card-primary">
                 <div class="card-body">
-                    <div class="table-responsive-lg">
+                    <div class="table-responsive">
                         <table id="table-1" class="table table-striped" width="100%">
                             <thead style="text-align:center;">
                                 <tr>
@@ -112,9 +118,11 @@
                                 </tr>
                             </thead>
                             <tbody>
+                                <?php $no = 0;?>
                                 @foreach ($alternatifs as $data)
+                                <?php $no++ ;?>
                                 <tr align="center">
-                                    <td>{{ $data->alternatif }}</td>
+                                    <td>{{ $no }}</td>
                                     <td>{{ $data->nama }}</td>
                                     <td>{{ $data->nilai }}</td>
                                     <td>
@@ -137,7 +145,13 @@
                                                             </div>
                                                             <div class="form-group">
                                                                 <h7>Nilai</h7>
-                                                                <input class="form-control mt-2" type="number" min="1" max="5" name="nilai" value="{{$data->nilai}}" required>
+                                                                <select class="form-control select2 mt-2" style="width: 100%" name="nilai" value="{{$data->nilai}}" data-minimum-results-for-search="-1" required>
+                                                                    @foreach ($datas['getklasifikasi'] as $data_klasifikasi)
+                                                                        @if ($data_klasifikasi->nama == $datas['getkriteria']->nama)
+                                                                        <option value="{{$data_klasifikasi->nilai}}" {{$data_klasifikasi->nilai == $data->nilai ? 'selected' : '' }}>{{$data_klasifikasi->klasifikasi}} ({{$data_klasifikasi->nilai}})</option>
+                                                                        @endif
+                                                                    @endforeach
+                                                                </select>
                                                             </div>
                                                     </div>
                                                     <div class="modal-footer">

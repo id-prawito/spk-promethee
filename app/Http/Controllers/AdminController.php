@@ -106,14 +106,11 @@ class AdminController extends Controller
 
     public function KlasifikasiCreate(Request $request)
     {
-
         DB::table('klasifikasis')->insert([
             'kriteria' => $request->kriteria,
             'nilai' => $request->nilai,
             'klasifikasi' => $request->klasifikasi
         ]);
-        
-        
         return redirect()->back()->with('success', 'Klasifikasi Berhasil di Tambah');
     }
 
@@ -154,6 +151,10 @@ class AdminController extends Controller
 
     public function UpdatePengguna(Request $request)
     {
+        $this->validate($request, [
+            'name' => 'required|min:3|max:50',
+            'email' => 'required|string|email|max:255|unique:users',
+        ]);
         $update = User::find($request->id);
         $update->name = $request->name;
         $update->email = $request->email;
@@ -191,7 +192,6 @@ class AdminController extends Controller
     public function AlternatifCreate(Request $request)
     {
         DB::table('alternatifs')->insert([
-            'id' => $request->id,
             'nama' => $request->nama,
             'kode' => $request->kode
         ]);

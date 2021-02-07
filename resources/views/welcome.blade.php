@@ -299,12 +299,21 @@
                                             </tr>
                                         </thead>
                                         <tbody style="text-align:center; font-size:13px">
-                                            @php
-                                            for ($id=1; $id <= Kustom::CountAlternatifs(); $id++) { echo '<tr align="center">' ; echo '<td align="center">' .$datas['alternatifs'][$id-1]['nama'].'</td>'; $getevals=Kustom::JoinanTabel($id); foreach ($getevals as $evals) { echo '<td>' .$evals->nilai.'</td>';
+                                        @php
+                                            foreach ($datas['alternatifs'] as $alternatif)
+                                            {
+                                                echo '<tr align="center">';
+                                                echo '<td align="center">' . $alternatif->nama . '</td>';
+                                                
+                                                $getevals=Kustom::JoinanTabel($alternatif->id);
+                                                
+                                                foreach ($getevals as $evals) {
+                                                    echo '<td>' . $evals->nilai . '</td>';
                                                 }
+                                                
                                                 echo '</tr>';
-                                                }
-                                                @endphp
+                                            }
+                                        @endphp
                                         </tbody>
                                     </table>
                                 </div>

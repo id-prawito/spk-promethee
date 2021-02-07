@@ -11,13 +11,6 @@
 @endpush 
 
 @push('page-scripts')
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-    tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
-});
-</script>
-<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
-</script>
 @endpush 
 
 @section('content')
@@ -29,7 +22,7 @@
 					<div class="col">
 						<h2 class="section-title mt-2">Pusat Bantuan dan Pertanyaan</h2>
 						<p style="text-align: justify;" class=" section-lead">
-							OVO merupakan aplikasi smart yang memberikan Anda kesempatan lebih besar mengumpulkan poin di banyak tempat. Anda bisa menggunakan OVO untuk bertransaksi di semua merchant bertanda OVO Accepted Here dan mengumpulkan serta menggunakan OVO Points di merchant bertanda OVO Zone <br></p>
+							Berikut adalah beberapa hal yang mungkin perlu diketahui dalam menggunakan sistem informasi pendukung keputusan atau melakukan perhitungan terhadap data untuk mengetahui prioritas lokasi pembangunan embung di Kabupaten Semarang.</p>
 					</div>
 				</div>
 				<div class="card-body">

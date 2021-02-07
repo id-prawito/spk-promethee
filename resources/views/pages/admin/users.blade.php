@@ -79,6 +79,21 @@
         </button>
     </div>
 
+    @elseif($message = Session::get('error'))
+    <div class="alert alert-danger alert-dismissible fade show alert-has-icon" role="alert">
+        <div class="alert-icon">
+            <i class="far fa-trash-alt"></i>
+        </div>
+        <div class="alert-body">
+            <div class="alert-title" style="font-weight:normal">Peringatan</div>
+            {{$message}}
+        </div>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+
+
     @elseif($message = Session::get('info'))
     <div class="alert alert-info alert-dismissible fade show alert-has-icon" role="alert">
         <div class="alert-icon">
@@ -93,6 +108,21 @@
         </button>
     </div>
     @endif
+
+    @error('email')
+    <div class="alert alert-danger alert-dismissible fade show alert-has-icon" role="alert">
+        <div class="alert-icon">
+            <i class="far fa-trash-alt"></i>
+        </div>
+        <div class="alert-body">
+            <div class="alert-title" style="font-weight:normal">Peringatan</div>
+            {{$message}}
+        </div>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    @enderror
 
     <!-- Tabel Responsive -->
     <div class="row">
@@ -139,7 +169,7 @@
                                                             </div>
                                                             <div class="form-group">
                                                                 <h7>Email</h7>
-                                                                <input class="form-control mt-2" type="text" name="email" value="{{$data->email}}" readonly>
+                                                                <input class="form-control mt-2" type="text" name="email" value="{{$data->email}}" class="form-control @error('email') is-invalid @enderror" required>
                                                             </div>
                                                             <div class="form-group">
                                                                 <h7>Role</h7>

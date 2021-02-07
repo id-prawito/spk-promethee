@@ -104,7 +104,7 @@
                 <div class="card-header">
                     <h4>Penjelasan</h4>
                     <div class="card-header-action">
-                        <a data-collapse="#penjelasan" class="btn btn-icon btn-info" href="#"><i class="fas fa-plus"></i></a>
+                        <a data-collapse="#penjelasan" class="btn btn-icon btn-info" href="#"><i class="fas fa-chevron-down"></i></a>
                     </div>
                 </div>
                 <div class="collapse" id="penjelasan">
@@ -121,58 +121,56 @@
         <div class="col-12 col-md-6 col-lg-7">
             <div class="card card-primary">
                 <div class="card-header">
-                    <h4>Tambah Klasifikasi</h4>
-                    <div class="card-header-action">
-                        <a data-collapse="#tambah" class="btn btn-icon btn-info" href="#"><i class="fas fa-plus"></i></a>
-                    </div>
+                    <button style="background-color: #3460df;line-height:32px; border-radius:5px;" class="btn btn-icon icon-left btn-primary" type="button" data-toggle="collapse" data-target="#tambah" aria-expanded="false" aria-controls="tambah">
+                        <i class="far fa-edit"></i> <b>TAMBAH KLASIFIKASI</b>
+                    </button>
                 </div>
                 <div class="collapse" id="tambah">
-                    <div style="margin-top: -20px;padding-bottom:57px;" class="card-body">
-                        <form action="{{route('klasifikasi.create')}}" method="POST" class="form">
-                            {{ csrf_field() }}
-                            <br>
-                            <div class="row">  
-                            <div class="col-md">
-                                    <div class="form-group">
-                                        <h7><b>Kriteria</b></h7>
-                                        <div class="input-group mt-2">
-                                            <select class="form-control select2 mt-2" style="width: 100%" name="kriteria" data-minimum-results-for-search="-1" required>
-                                            <option value="">- Pilih Kriteria</option>
-                                            @foreach ($kriteria as $data)
-                                                <option value={{$data->id}}>{{$data->nama}}</option>
-                                                @endforeach
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
+                    <div class="card-body">
+                            <form action="{{route('klasifikasi.create')}}" method="POST" class="form">
+                                {{ csrf_field() }}
+                                <div class="row">  
                                 <div class="col-md">
-                                    <div class="form-group">
-                                        <h7><b>Nilai</b></h7>
-                                        <div class="input-group mt-2">
-                                            <div class="input-group-prepend">
+                                        <div class="form-group">
+                                            <h7><b>Kriteria</b></h7>
+                                            <div class="input-group mt-2">
+                                                <select class="form-control select2 mt-2" style="width: 100%" name="kriteria" data-minimum-results-for-search="-1" required>
+                                                <option value="">- Pilih Kriteria</option>
+                                                @foreach ($kriteria as $data)
+                                                    <option value={{$data->id}}>{{$data->nama}}</option>
+                                                    @endforeach
+                                                </select>
                                             </div>
-                                            <input class="form-control" type="number" min="1" name="nilai" placeholder="..." required>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md">
-                                    <div class="form-group">
-                                        <h7><b>Klasifikasi</b></h7>
-                                        <div class="input-group mt-2">
-                                            <div class="input-group-prepend">
-                                                <div class="input-group-text">
-                                                    <i class="fas fa-location-arrow"></i>
+                                    <div class="col-md">
+                                        <div class="form-group">
+                                            <h7><b>Nilai</b></h7>
+                                            <div class="input-group mt-2">
+                                                <div class="input-group-prepend">
                                                 </div>
+                                                <input class="form-control" type="number" min="1" name="nilai" placeholder="..." required>
                                             </div>
-                                            <input class="form-control" type="text" id="klasifikasi" name="klasifikasi" placeholder="Klasifikasi..." required>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <button style="line-height:26px;" class="btn btn-icon icon-left btn-info" type="submit"><i class="fas fa-info-circle"></i> <b>PROSES KLASIFIKASI</b></button>
-                        </form>
+                                <div class="row">
+                                    <div class="col-md">
+                                        <div class="form-group">
+                                            <h7><b>Klasifikasi</b></h7>
+                                            <div class="input-group mt-2">
+                                                <div class="input-group-prepend">
+                                                    <div class="input-group-text">
+                                                        <i class="fas fa-location-arrow"></i>
+                                                    </div>
+                                                </div>
+                                                <input class="form-control" type="text" id="klasifikasi" name="klasifikasi" placeholder="Klasifikasi..." required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button style="line-height:26px; margin-top:15px; margin-bottom:23px;" class="btn btn-icon icon-left btn-info" type="submit"><i class="fas fa-info-circle"></i> <b>PROSES KLASIFIKASI</b></button>
+                            </form>
                     </div>
                 </div>
             </div>
@@ -186,7 +184,7 @@
                         <table id="table-1" class="table table-striped" width="100%">
                             <thead style="text-align:center;">
                                 <tr>
-                                    <th>ID</th>
+                                    <th>NO</th>
                                     <th>KRITERIA</th>
                                     <th>NILAI</th>
                                     <th>KLASIFIKASI</th>
@@ -203,6 +201,7 @@
                                     <td>{{$data->nilai}}</td>
                                     <td>{{$data->klasifikasi}}</td>
                                     <td>
+                                    <button class="btn btn-icon icon-left btn-warning" data-toggle="modal" data-target="#modaledit{{$data->id}}"><i class="far fa-edit"></i> Edit</button>
                                         <button class="btn btn-icon icon-left btn-danger" data-toggle="modal" data-target="#modaldelete{{$data->id}}"><i class="far fa-trash-alt"></i> Delete</button>
                                         @push('tambahan')
                                         <div class="modal fade" tabindex="-1" role="dialog" id="modaldelete{{$data->id}}">
@@ -226,7 +225,6 @@
                                             </div>
                                         </div>
                                         @endpush
-                                        <button class="btn btn-icon icon-left btn-warning" data-toggle="modal" data-target="#modaledit{{$data->id}}"><i class="far fa-edit"></i> Edit</button>
                                     </td>
                                     @push('tambahan')
                                     <div class="modal fade" tabindex="-1" role="dialog" id="modaledit{{$data->id}}">
@@ -271,7 +269,7 @@
                             </tbody>
                             <tfoot style="text-align:center; color:#666">
                                 <tr>
-                                    <th>ID</th>
+                                    <th>NO</th>
                                     <th>KRITERIA</th>
                                     <th>NILAI</th>
                                     <th>KLASIFIKASI</th>

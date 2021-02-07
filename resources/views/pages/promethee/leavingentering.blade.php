@@ -49,7 +49,7 @@
                 <div class="card-header">
                     <h4>Penjelasan</h4>
                     <div class="card-header-action">
-                        <a data-collapse="#penjelasan" class="btn btn-icon btn-info" href="#"><i class="fas fa-plus"></i></a>
+                        <a data-collapse="#penjelasan" class="btn btn-icon btn-info" href="#"><i class="fas fa-chevron-down"></i></a>
                     </div>
                 </div>
                 <div class="collapse" id="penjelasan">

@@ -51,7 +51,7 @@
                 <div class="card-header">
                     <h4>Detail Kriteria</h4>
                     <div class="card-header-action">
-                        <a data-collapse="#mycard-collapse" class="btn btn-icon btn-info" href="#"><i class="fas fa-plus"></i></a>
+                        <a data-collapse="#mycard-collapse" class="btn btn-icon btn-info" href="#"><i class="fas fa-chevron-down"></i></a>
                     </div>
                 </div>
                 <div class="collapse" id="mycard-collapse">
@@ -172,15 +172,20 @@
                             </thead>
                             <tbody style="text-align:center;">
                             @php
-                                    for ($id=1; $id <= Kustom::CountAlternatifs(); $id++) 
-                                    
-                                    { echo '<tr align="center">' ; echo '<td align="center">' 
-                                    .$datas['alternatifs'][$id-1]['nama'].'</td>'; $getevals=Kustom::JoinanTabel($id); 
-                                    foreach ($getevals as $evals) { echo '<td>' .$evals->nilai.'</td>';
+                                    foreach ($datas['alternatifs'] as $alternatif)
+                                    {
+                                        echo '<tr align="center">';
+                                        echo '<td align="center">' . $alternatif->nama . '</td>';
+                                        
+                                        $getevals=Kustom::JoinanTabel($alternatif->id);
+                                        
+                                        foreach ($getevals as $evals) {
+                                            echo '<td>' . $evals->nilai . '</td>';
                                         }
+                                        
                                         echo '</tr>';
-                                        }
-                                        @endphp
+                                    }
+                            @endphp
                             </tbody>
                             <tfoot style="text-align:center; color:#666">
                                 <tr>

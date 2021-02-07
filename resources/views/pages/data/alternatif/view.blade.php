@@ -98,19 +98,6 @@
                             <div class="row">
                                 <div class="col-md">
                                     <div class="form-group">
-                                        <h7><b>ID Alternatif</b></h7>
-                                        <div class="input-group mt-2">
-                                            <div class="input-group-prepend">
-                                                <div class="input-group-text">
-                                                    <i class="fas fa-location-arrow"></i>
-                                                </div>
-                                            </div>
-                                            <input class="form-control" type="number" min="1" name="id" placeholder="ID Alternatif..." required>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md">
-                                    <div class="form-group">
                                         <h7><b>Nama Alternatif</b></h7>
                                         <div class="input-group mt-2">
                                             <div class="input-group-prepend">
@@ -131,7 +118,7 @@
                                                     <i class="fas fa-lock"></i>
                                                 </div>
                                             </div>
-                                            <input class="form-control" type="text" name="kode" placeholder="..." required>
+                                            <input class="form-control" type="text" maxlength="5" name="kode" placeholder="..." required>
                                         </div>
                                     </div>
                                 </div>
@@ -261,16 +248,18 @@
                         <table id="paginationSimpleNumbers" class="table table-striped" width="100%">
                             <thead style="text-align:center;">
                                 <tr>
-                                    <th>ID</th>
+                                    <th>NO</th>
                                     <th>NAMA ALTERNATIF</th>
                                     <th>KODE</th>
                                     <th>OPSI</th>
                                 </tr>
                             </thead>
                             <tbody style="text-align:center;">
+                                <?php $no = 0;?>
                                 @foreach ($alternatifs as $data)
+                                <?php $no++ ;?>
                                 <tr align="center">
-                                    <td>{{$data->id}}</td>
+                                    <td>{{ $no }}</td>
                                     <td>{{$data->nama }}</td>
                                     <td>{{$data->kode }}</td>
                                     <td><button class="btn btn-icon icon-left btn-warning" data-toggle="modal" data-target="#modaledit{{$data->id}}"><i class="far fa-edit"></i> Edit</button>
@@ -292,7 +281,7 @@
                                                             </div>
                                                             <div class="form-group">
                                                                 <h7>Kode</h7>
-                                                                <input class="form-control mt-2" type="text" name="kode" value="{{$data->kode}}" required>
+                                                                <input class="form-control mt-2" type="text" maxlength="5" name="kode" value="{{$data->kode}}" required>
                                                             </div>
                                                     </div>
                                                     <div class="modal-footer">
@@ -337,7 +326,7 @@
                             </tbody>
                             <tfoot style="text-align:center; color:#666">
                                 <tr>
-                                    <th>ID</th>
+                                    <th>NO</th>
                                     <th>NAMA ALTERNATIF</th>
                                     <th>KODE</th>
                                     <th>OPSI</th>

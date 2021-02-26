@@ -48,6 +48,25 @@
     </div>
     @endif
 <div class="row">
+    <div class="col-12 col-lg-12">
+            <div class="card card-primary">
+                <div class="card-header">
+                    <h4>Penjelasan</h4>
+                    <div class="card-header-action">
+                        <a data-collapse="#penjelasan" class="btn btn-icon btn-info" href="#"><i class="fas fa-chevron-down"></i></a>
+                    </div>
+                </div>
+                <div class="collapse" id="penjelasan">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col">
+                                <p style="text-align: justify;">Data Kriteria merupakan data daripada perhitungan yang memuat informasi/data tabel berupa 7 Kriteria dengan masing-masing memiliki parameter maks/min, tipe preferensi <i>(Usual, Linier, Level, Quasi, Gaussion, Area)</i>, nilai q dan p, serta nilai bobot kriteria. Pada SPK - Promethee data kriteria bersifat tetap atau tidak bisa ditambah oleh kriteria lain dan untuk perubahan atau pembaharuan nilai kriteria dapat dilakukan.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     <div class="col-12 col-md-6 col-lg-12">
         <div class="card card-primary">
             <div class="card-body">

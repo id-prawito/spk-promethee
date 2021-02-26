@@ -84,6 +84,21 @@
     </div>
     @endif
 
+    @error('kode')
+    <div class="alert alert-danger alert-dismissible fade show alert-has-icon" role="alert">
+        <div class="alert-icon">
+            <i class="far fa-lightbulb"></i>
+        </div>
+        <div class="alert-body">
+            <div class="alert-title" style="font-weight:normal">Pemberitahuan</div>
+            {{$message}}
+        </div>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    @enderror
+
     <div class="row">
         <div class="col-12 col-md-6 col-lg-12">
             <div class="card card-primary">
@@ -118,7 +133,12 @@
                                                     <i class="fas fa-lock"></i>
                                                 </div>
                                             </div>
-                                            <input class="form-control" type="text" maxlength="5" name="kode" placeholder="..." required>
+                                            <input class="form-control @error('kode') is-invalid @enderror" type="text" maxlength="5" name="kode" placeholder="..." required>
+                                            @error('kode')
+                                            <span class="invalid-feedback mt-3">
+                                                {{ $message }}
+                                            </span>
+                                            @enderror
                                         </div>
                                     </div>
                                 </div>
@@ -260,7 +280,7 @@
                                 <?php $no++ ;?>
                                 <tr align="center">
                                     <td>{{ $no }}</td>
-                                    <td>{{$data->nama }}</td>
+                                    <td>{{ucfirst($data->nama)}}</td>
                                     <td>{{$data->kode }}</td>
                                     <td><button class="btn btn-icon icon-left btn-warning" data-toggle="modal" data-target="#modaledit{{$data->id}}"><i class="far fa-edit"></i> Edit</button>
                                         @push('tambahan')
@@ -268,7 +288,7 @@
                                             <div class="modal-dialog" role="document">
                                                 <div class="modal-content">
                                                     <div class="modal-header">
-                                                        <h7><b>Edit Alternatif {{$data->nama}}</b></h7>
+                                                        <h7><b>Edit Alternatif {{ucfirst($data->nama)}}</b></h7>
                                                     </div>
                                                     <div class="modal-body">
                                                         <form action="{{route('alternatif.update', $data->id)}}" method="POST">
@@ -277,11 +297,11 @@
                                                             <br>
                                                             <div class="form-group">
                                                                 <h7>Nama Alternatif</h7>
-                                                                <input class="form-control mt-2" type="text" name="nama" value="{{$data->nama}}" required>
+                                                                <input class="form-control mt-2" type="text" name="nama" minlength="3" maxlength="25" value="{{ucfirst($data->nama)}}" required>
                                                             </div>
                                                             <div class="form-group">
                                                                 <h7>Kode</h7>
-                                                                <input class="form-control mt-2" type="text" maxlength="5" name="kode" value="{{$data->kode}}" required>
+                                                                <input class="form-control mt-2" type="text" maxlength="5" name="kode" value="{{$data->kode}}" readonly>
                                                             </div>
                                                     </div>
                                                     <div class="modal-footer">
@@ -303,10 +323,10 @@
                                             <div class="modal-dialog" role="document">
                                                 <div class="modal-content">
                                                     <div class="modal-header">
-                                                        <h6><b>Hapus {{$data->nama}}</b></h6>
+                                                        <h6><b>Hapus {{ucfirst($data->nama)}}</b></h6>
                                                     </div>
                                                     <div class="modal-body mb-0">
-                                                        <h7>Apakah anda ingin menghapus Alternatif <b>{{$data->nama}}</b></h7>
+                                                        <h7>Apakah anda ingin menghapus Alternatif <b>{{ucfirst($data->nama)}}</b></h7>
                                                     </div>
                                                     <div class="modal-footer br">
                                                         <button type="button" class="btn btn-icon icon-left btn-info" data-dismiss="modal"><i class="fas fa-times"></i> Tutup</button>

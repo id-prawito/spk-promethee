@@ -12,8 +12,11 @@ use App\Klasifikasi;
 use App\Pengguna;
 use App\Preferensi;
 use App\User;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Auth;
 use Session;
+use App\Mail\NotifAktivasi;
+use App\Mail\NotifRegister;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Redirect;
@@ -153,7 +156,8 @@ class AdminController extends Controller
     {
         $this->validate($request, [
             'name' => 'required|min:3|max:50',
-            'email' => 'required|string|email|max:255|unique:users',
+            'email' => 'required|string|email|max:255'
+            // 'email' => 'required|string|email|max:255|unique:users'
         ]);
         $update = User::find($request->id);
         $update->name = $request->name;
@@ -191,6 +195,11 @@ class AdminController extends Controller
 
     public function AlternatifCreate(Request $request)
     {
+        $this->validate($request, [
+            'kode' => 'required|max:5|unique:alternatifs'
+            // 'email' => 'required|string|email|max:255|unique:users'
+        ]);
+
         DB::table('alternatifs')->insert([
             'nama' => $request->nama,
             'kode' => $request->kode
@@ -241,6 +250,8 @@ class AdminController extends Controller
         }
         $data->save();
 
+        Mail::to($data->email)->send(new NotifAktivasi ($data));
+        
         return Redirect::to('admin/user')->with('message', $data->name . ' Status has been changed succesfuly.');
     }
 }

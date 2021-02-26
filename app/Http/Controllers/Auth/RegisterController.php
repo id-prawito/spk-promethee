@@ -10,6 +10,9 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\Request;
+use App\Mail\NotifRegister;
+use App\Mail\NotifRegisterAdmin;
+use Illuminate\Support\Facades\Mail;
 
 class RegisterController extends Controller
 {
@@ -67,7 +70,7 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        return User::create([
+        $user = User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'email_verified_at' => now(),
@@ -75,5 +78,9 @@ class RegisterController extends Controller
             'role' => $data['role'],
             'status' => false,
         ]);
+        
+        Mail::to($data['email'])->send(new NotifRegister ($user));
+        Mail::to('prawito0798@gmail.com')->send(new NotifRegisterAdmin ($user));
+        return $user;
     }
 }

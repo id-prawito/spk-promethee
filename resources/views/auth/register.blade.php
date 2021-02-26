@@ -61,6 +61,9 @@
                                 <span style="border: none; font-size: 14px; background-color:#F7F7F7; padding-left:20px;padding-right:20px; color:#000;" class="input-group-text" id="inputGroupPrepend"> Role</span>
                             </div>
                             <input type="text" style="font-size: 14px;" class="form-control" name="role" value="User" readonly>
+                            <small class="form-text text-muted" style="margin-top:14px;" >
+                                <strong>Role untuk pengguna yang akan terdaftar adalah User</strong>
+                            </small>
                         </div>
                     </div>
                 </div>

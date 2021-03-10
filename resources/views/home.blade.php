@@ -158,10 +158,10 @@
                         </div>
                         <div class="row">
                             <div class="col">
-                                <p style="font-size: 18px; margin-top:8px; color:#ceb546; font-weight:600;" class="card-text"><b>{{number_format($corona_jawaTengah[2]['attributes']['Kasus_Posi']-$corona_jawaTengah[2]['attributes']['Kasus_Semb']-$corona_jawaTengah[2]['attributes']['Kasus_Meni'])}}</b></p>
+                                <p style="font-size: 16px; margin-top:8px; color:#ceb546; font-weight:600;" class="card-text"><b>{{number_format($corona_jawaTengah[2]['attributes']['Kasus_Posi']-$corona_jawaTengah[2]['attributes']['Kasus_Semb']-$corona_jawaTengah[2]['attributes']['Kasus_Meni'])}}</b></p>
                             </div>
                             <div class="col">
-                                <p style="font-size: 18px; margin-top:8px; color:#ceb546; font-weight:600;" class="card-text"><b>{{number_format($value[$days_count]['confirmed']-$value[$days_count]['recovered']-$value[$days_count]['deaths'])}}</b></p>
+                                <p style="font-size: 16px; margin-top:8px; color:#ceb546; font-weight:600;" class="card-text"><b>{{number_format($value[$days_count]['confirmed']-$value[$days_count]['recovered']-$value[$days_count]['deaths'])}}</b></p>
                             </div>
                         </div>
                         <div class="row">
@@ -191,10 +191,10 @@
                         </div>
                         <div class="row">
                             <div class="col">
-                                <p style="font-size: 18px; margin-top:8px; color:#27ae60; font-weight:600;" class="card-text"><b>{{number_format($corona_jawaTengah[2]['attributes']['Kasus_Semb'])}}</b></p>
+                                <p style="font-size: 16px; margin-top:8px; color:#27ae60; font-weight:600;" class="card-text"><b>{{number_format($corona_jawaTengah[2]['attributes']['Kasus_Semb'])}}</b></p>
                             </div>
                             <div class="col">
-                                <p style="font-size: 18px; margin-top:8px; color:#27ae60; font-weight:600;" class="card-text"><b>{{number_format($value[$days_count]['recovered'])}}</b></p>
+                                <p style="font-size: 16px; margin-top:8px; color:#27ae60; font-weight:600;" class="card-text"><b>{{number_format($value[$days_count]['recovered'])}}</b></p>
                             </div>
                         </div>
                         <div class="row">
@@ -224,10 +224,10 @@
                         </div>
                         <div class="row">
                             <div class="col">
-                                <p style="font-size: 18px; margin-top:8px; color:#a20e0e; font-weight:600;" class="card-text"><b>{{number_format($corona_jawaTengah[2]['attributes']['Kasus_Meni'])}}</b></p>
+                                <p style="font-size: 16px; margin-top:8px; color:#a20e0e; font-weight:600;" class="card-text"><b>{{number_format($corona_jawaTengah[2]['attributes']['Kasus_Meni'])}}</b></p>
                             </div>
                             <div class="col">
-                                <p style="font-size: 18px; margin-top:8px; color:#a20e0e; font-weight:600;" class="card-text"><b>{{number_format($value[$days_count]['deaths'])}}</b></p>
+                                <p style="font-size: 16px; margin-top:8px; color:#a20e0e; font-weight:600;" class="card-text"><b>{{number_format($value[$days_count]['deaths'])}}</b></p>
                             </div>
                         </div>
                         <div class="row">

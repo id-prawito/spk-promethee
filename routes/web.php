@@ -27,11 +27,13 @@ Route::get('/admin/data/kriteria', 'AdminController@KriteriaRead')->name('kriter
 Route::get('/admin/data/kriteria/edit', 'AdminController@KriteriaEdit')->name('kriteria.edit');
 
 // USERS
-Route::get('/admin/user', 'AdminController@Pengguna')->name('pengguna.read');
-Route::get('/status/{id}', 'AdminController@Status')->name('status');
-Route::post('/admin/user/post', 'AdminController@CreatePengguna')->name('pengguna.create');
-Route::post('/admin/user/{id}/update', 'AdminController@UpdatePengguna')->name('pengguna.update');
-Route::post('/admin/user/delete', 'AdminController@DeletePengguna')->name('pengguna.delete');
+Route::group(['middleware' => ['auth', 'level:Administrator']], function (){
+    Route::get('/admin/user', 'AdminController@Pengguna')->name('pengguna.read');
+    Route::get('/status/{id}', 'AdminController@Status')->name('status');
+    Route::post('/admin/user/post', 'AdminController@CreatePengguna')->name('pengguna.create');
+    Route::post('/admin/user/{id}/update', 'AdminController@UpdatePengguna')->name('pengguna.update');
+    Route::post('/admin/user/delete', 'AdminController@DeletePengguna')->name('pengguna.delete');
+});
 
 // PREFERENSI
 Route::get('/admin/data/preferensi', 'AdminController@Preferensi')->name('preferensi.read');

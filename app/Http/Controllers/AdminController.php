@@ -87,10 +87,17 @@ class AdminController extends Controller
 
     public function KriteriaView($id)
     {
-        $alternatifs = DB::table('alternatifs')->select('alternatifs.id', 'alternatifs.nama', 'evaluasis.id', 'evaluasis.alternatif', 'evaluasis.kriteria', 'evaluasis.nilai')->join('evaluasis', 'alternatifs.id', '=', 'evaluasis.alternatif')->where('evaluasis.kriteria', '=', $id)->get();
-        $datas['getkriteria'] = DB::table('kriterias')->find($id);
-        $datas['getklasifikasi'] = DB::table('klasifikasis')->select('klasifikasis.id', 'kriterias.nama', 'klasifikasis.nilai', 'klasifikasis.klasifikasi')->join('kriterias', 'klasifikasis.kriteria', '=', 'kriterias.id')->get();
-        return view('pages/data/kriteria/view', ['alternatifs' => $alternatifs], ['datas' => $datas]);
+        try {
+            $alternatifs = DB::table('alternatifs')->select('alternatifs.id', 'alternatifs.nama', 'evaluasis.id', 'evaluasis.alternatif', 'evaluasis.kriteria', 'evaluasis.nilai')->join('evaluasis', 'alternatifs.id', '=', 'evaluasis.alternatif')->where('evaluasis.kriteria', '=', $id)->get();
+            $datas['getkriteria'] = DB::table('kriterias')->select('kriterias.id', 'kriterias.nama')->find($id);
+            $datas['getklasifikasi'] = DB::table('klasifikasis')->select('klasifikasis.id', 'kriterias.nama', 'klasifikasis.nilai', 'klasifikasis.klasifikasi')->join('kriterias', 'klasifikasis.kriteria', '=', 'kriterias.id')->get();
+            // dd($datas['getkriteria']);
+            return view('pages/data/kriteria/view', ['alternatifs' => $alternatifs], ['datas' => $datas]);
+            
+        } catch (\Exception $e) {
+
+        }
+        
     }
 
     public function Klasifikasi()

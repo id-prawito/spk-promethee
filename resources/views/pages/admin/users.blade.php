@@ -199,7 +199,7 @@
                                         </div>
                                         @endpush
                                         @if ($data->role != "Administrator")
-                                        <button class="btn btn-icon icon-left btn-danger" data-toggle="modal" data-target="#modaldelete{{$data->id}}"><i class="far fa-edit"></i> Delete</button>
+                                        <button class="btn btn-icon icon-left btn-danger" data-toggle="modal" data-target="#modaldelete{{$data->id}}"><i class="far fa-edit"></i> Hapus</button>
                                         @push('tambahan')
                                         @csrf
                                         <div class="modal fade" tabindex="-1" role="dialog" id="modaldelete{{$data->id}}">
@@ -280,16 +280,16 @@
                                     <td>{{$user->email}}</td>
                                     <td>
                                         @if ($user->status == 0)
-                                        <b>Inactive</b>
+                                        <b>Non Aktif</b>
                                         @else
-                                        <b>Active</b>
+                                        <b>Aktif</b>
                                         @endif
                                     </td>
                                     <td>
                                         @if ($user -> status == 1)
-                                        <a href="{{route('status', ['id'=>$user->id])}}" class="btn btn-icon icon-left btn-danger"><i class="far fa-edit"></i> Deactivated</a></a>
+                                        <a href="{{route('status', ['id'=>$user->id])}}" class="btn btn-icon icon-left btn-danger"><i class="far fa-edit"></i> Dinonaktifkan</a></a>
                                         @else
-                                        <a href="{{route('status', ['id'=>$user->id])}}" class="btn btn-icon icon-left btn-info"><i class="far fa-edit"></i> Actived</a></a>
+                                        <a href="{{route('status', ['id'=>$user->id])}}" class="btn btn-icon icon-left btn-info"><i class="far fa-edit"></i> Diaktifkan</a></a>
                                         @endif
                                     </td>
                                 </tr>

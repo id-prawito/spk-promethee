@@ -149,7 +149,7 @@
                                             <div class="input-group mt-2">
                                                 <div class="input-group-prepend">
                                                 </div>
-                                                <input class="form-control" type="number" min="1" name="nilai" placeholder="..." required>
+                                                <input class="form-control" type="number" min="1" max="20" name="nilai" placeholder="..." required>
                                             </div>
                                         </div>
                                     </div>
@@ -202,7 +202,7 @@
                                     <td>{{$data->klasifikasi}}</td>
                                     <td>
                                     <button class="btn btn-icon icon-left btn-warning" data-toggle="modal" data-target="#modaledit{{$data->id}}"><i class="far fa-edit"></i> Edit</button>
-                                        <button class="btn btn-icon icon-left btn-danger" data-toggle="modal" data-target="#modaldelete{{$data->id}}"><i class="far fa-trash-alt"></i> Delete</button>
+                                        <button class="btn btn-icon icon-left btn-danger" data-toggle="modal" data-target="#modaldelete{{$data->id}}"><i class="far fa-trash-alt"></i> Hapus</button>
                                         @push('tambahan')
                                         <div class="modal fade" tabindex="-1" role="dialog" id="modaldelete{{$data->id}}">
                                             <div class="modal-dialog" role="document">
@@ -244,7 +244,7 @@
                                                         </div>
                                                         <div class="form-group">
                                                             <h7>Nilai Klasifikasi</h7>
-                                                            <input class="form-control mt-2" disabled type="number" name="nilai" value="{{$data->nilai}}">
+                                                            <input class="form-control mt-2" min="1" max="20" required type="number" name="nilai" value="{{$data->nilai}}">
                                                         </div>
                                                         <div class="form-group">
                                                             <h7>Klasifikasi</h7>

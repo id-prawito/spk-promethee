@@ -139,11 +139,11 @@
                                                     </div>
                                                     <div class="form-group">
                                                         <h7>q</h7>
-                                                        <input class="form-control mt-2" type="number" min="1" step="any" name="q" value="{{$data->q}}">
+                                                        <input class="form-control mt-2" type="number" min="1" max="20" step="any" name="q" value="{{$data->q}}">
                                                     </div>
                                                     <div class="form-group">
                                                         <h7>p</h7>
-                                                        <input class="form-control mt-2" type="number" min="1" step="any" name="p" value="{{$data->p}}">
+                                                        <input class="form-control mt-2" type="number" min="1" min="20" step="any" name="p" value="{{$data->p}}">
                                                     </div>
                                                     <div class="form-group">
                                                         <h7>Bobot</h7>

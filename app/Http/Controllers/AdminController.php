@@ -221,7 +221,7 @@ class AdminController extends Controller
                 'alternatif' => $getid->id,
                 'kriteria' => "$i",
                 'nilai' => $request->kriteria[$i - 1],
-                'submit_by' => Auth::user()->id
+                'submit_by' => Auth::user()->name
             ]);
         }
 

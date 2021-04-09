@@ -152,7 +152,7 @@
                                             <select class="form-control select2 mt-2" style="width: 100%" name="kriteria[]" data-minimum-results-for-search="-1" required>
                                                 @foreach ($datas['getklasifikasi'] as $data)
                                                 @if ($data->nama == 'Vegetasi Area G. E.')
-                                                <option value={{$data->nilai}}>{{$data->klasifikasi}}</option>
+                                                <option value={{$data->nilai}}>{{$data->klasifikasi}} ({{$data->nilai}})</option>
                                                 @endif
                                                 @endforeach
                                             </select>
@@ -166,7 +166,7 @@
                                             <select class="form-control select2 mt-2" style="width: 100%" name="kriteria[]" data-minimum-results-for-search="-1" required>
                                                 @foreach ($datas['getklasifikasi'] as $data)
                                                 @if ($data->nama == 'Volume Material T.')
-                                                <option value={{$data->nilai}}>{{$data->klasifikasi}}</option>
+                                                <option value={{$data->nilai}}>{{$data->klasifikasi}} ({{$data->nilai}})</option>
                                                 @endif
                                                 @endforeach
                                             </select>
@@ -180,7 +180,7 @@
                                             <select class="form-control select2 mt-2" style="width: 100%" name="kriteria[]" data-minimum-results-for-search="-1" required>
                                                 @foreach ($datas['getklasifikasi'] as $data)
                                                 @if ($data->nama == 'Luas Daerah Y. A. D.')
-                                                <option value={{$data->nilai}}>{{$data->klasifikasi}}</option>
+                                                <option value={{$data->nilai}}>{{$data->klasifikasi}} ({{$data->nilai}})</option>
                                                 @endif
                                                 @endforeach
                                             </select>
@@ -196,7 +196,7 @@
                                             <select class="form-control select2 mt-2" style="width: 100%" name="kriteria[]" data-minimum-results-for-search="-1" required>
                                                 @foreach ($datas['getklasifikasi'] as $data)
                                                 @if ($data->nama == 'Volume Tampungan E.')
-                                                <option value={{$data->nilai}}>{{$data->klasifikasi}}</option>
+                                                <option value={{$data->nilai}}>{{$data->klasifikasi}} ({{$data->nilai}})</option>
                                                 @endif
                                                 @endforeach
                                             </select>
@@ -210,7 +210,7 @@
                                             <select class="form-control select2 mt-2" style="width: 100%" name="kriteria[]" data-minimum-results-for-search="-1" required>
                                                 @foreach ($datas['getklasifikasi'] as $data)
                                                 @if ($data->nama == 'Lama Operasi')
-                                                <option value={{$data->nilai}}>{{$data->klasifikasi}}</option>
+                                                <option value={{$data->nilai}}>{{$data->klasifikasi}} ({{$data->nilai}})</option>
                                                 @endif
                                                 @endforeach
                                             </select>
@@ -224,7 +224,7 @@
                                             <select class="form-control select2 mt-2" style="width: 100%" name="kriteria[]" data-minimum-results-for-search="-1" required>
                                                 @foreach ($datas['getklasifikasi'] as $data)
                                                 @if ($data->nama == 'Harga Air/M3')
-                                                <option value={{$data->nilai}}>{{$data->klasifikasi}}</option>
+                                                <option value={{$data->nilai}}>{{$data->klasifikasi}} ({{$data->nilai}})</option>
                                                 @endif
                                                 @endforeach
                                             </select>
@@ -240,7 +240,7 @@
                                             <select class="form-control select2 mt-2" style="width: 100%" name="kriteria[]" data-minimum-results-for-search="-1" required>
                                                 @foreach ($datas['getklasifikasi'] as $data)
                                                 @if ($data->nama == 'Akses Jalan Menuju S')
-                                                <option value={{$data->nilai}}>{{$data->klasifikasi}}</option>
+                                                <option value={{$data->nilai}}>{{$data->klasifikasi}} ({{$data->nilai}})</option>
                                                 @endif
                                                 @endforeach
                                             </select>
@@ -317,7 +317,7 @@
                                             </div>
                                         </div>
                                         @endpush
-                                        <button class="btn btn-icon icon-left btn-danger" data-toggle="modal" data-target="#modaldelete{{$data->id}}"><i class="far fa-trash-alt"></i> Delete</button>
+                                        <button class="btn btn-icon icon-left btn-danger" data-toggle="modal" data-target="#modaldelete{{$data->id}}"><i class="far fa-trash-alt"></i> Hapus</button>
                                         @push('tambahan')
                                         <div class="modal fade" tabindex="-1" role="dialog" id="modaldelete{{$data->id}}">
                                             <div class="modal-dialog" role="document">
